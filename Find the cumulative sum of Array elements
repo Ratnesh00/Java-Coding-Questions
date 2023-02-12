@@ -1,0 +1,54 @@
+/* Sample Input 1:
+Enter the number of elements
+5
+Enter the elements
+2
+3
+5
+7
+1
+Sample Output 1:
+2 5 10 17 18
+
+Sample Input 2:
+Enter the number of elements
+5
+Enter the elements
+2
+3
+-5
+7
+1
+Sample Output 2:
+2 5 0 7 8
+*/
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    
+		System.out.print("Enter the number of elements : ");
+		int n = s.nextInt();
+		int i;
+		int temp = 0;
+		
+		System.out.println("Enter the elements : ");
+		int[] arr = new int[n];
+		int[] arr1 = new int[n];
+		for(i=0;i<n;i++){
+		    arr[i] = s.nextInt();
+		}
+		
+	    for(i=0;i<n;i++){
+	        temp = temp+arr[i];
+	        arr1[i] = temp;
+	    }
+	    
+	    for(i=0;i<n;i++){
+	        System.out.print(arr1[i] + " ");
+	    }
+	}
+}

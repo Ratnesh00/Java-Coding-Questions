@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    
+	    System.out.print("Enter the alphabet : ");
+	    String alphabet = s.next();
+	    
+	    int x = alphabet.charAt(0);
+		System.out.println("The corresponding number to given alphabet is : " + x);
+	}
+}

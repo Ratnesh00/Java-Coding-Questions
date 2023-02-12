@@ -1,0 +1,43 @@
+/*A parking lot in a mall has RxC number of parking spaces. 
+Each parking space will either be  empty(0) or full(1). 
+The status (0/1) of a parking space is represented as the element of the matrix. 
+The task is to find index of the row(R) in the parking lot that has the most of the parking spaces full(1).*/
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    
+	    int R = s.nextInt();
+	    int C = s.nextInt();
+	    int r =0;
+	    int[][] M = new int[R][C];
+	    int[] m = new int[R];
+	    
+	    for(int i=0; i<R; i++){
+	        for(int j=0;j<C;j++){
+	            M[i][j] = s.nextInt();
+	        }
+	    }
+	    
+	    for(int i=0;i<R;i++){
+	        for(int j=0;j<C;j++){
+	            r = r + M[i][j];
+	        }
+	        m[i] = r;
+	        r=0;
+	    }
+	    
+        int max = 0;
+        for(int k=1;k<R;k++){
+            if(m[max] < m[k]){
+                max = k;
+            }
+        }
+	   
+	    System.out.println(max + 1);
+	}
+}
+

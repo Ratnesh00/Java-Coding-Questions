@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter the number : ");
+		float n = s.nextFloat();
+		
+		int m = (int)n;  // Type casting double to int
+		System.out.println("Integer part is : " + m);
+		
+		float c = (n - m);
+		System.out.println("Decimal part is : " + c);
+	}
+}

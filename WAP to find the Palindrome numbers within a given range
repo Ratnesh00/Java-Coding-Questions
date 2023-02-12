@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    
+		System.out.print("Enter the starting number : ");
+		int a = s.nextInt();
+		
+		System.out.print("Enter the ending number : ");
+		int b = s.nextInt();
+		
+		System.out.println("The pallindromes between " + a + " and " + b + " are : ");
+		for(int i=a;i<=b;i++)
+		{
+		    int r = 0;
+		    int temp = i;
+		    
+		    while(temp!=0){
+		        r = (r*10)+(i%10);
+		        temp = temp/10;
+		    }
+		    
+		    if(i == r){
+		        System.out.print(i + " ");
+		    }
+		    else{
+		        continue;
+		    }
+		}
+	}
+}

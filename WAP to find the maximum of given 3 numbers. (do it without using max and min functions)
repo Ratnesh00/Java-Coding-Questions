@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Enter three numbers : ");
+		int a = s.nextInt();
+		int b = s.nextInt();
+		int c = s.nextInt();
+		
+		if(a>b){
+		    if(a>c){
+		        System.out.println("a = " + a + " is the maximum of the given three numbers");
+		    }
+		    else{
+		        System.out.println("c = " + c + " is the maximum of the given three numbers");
+		    }
+		}
+		else{
+		    if(b>c){
+		        System.out.println("b = " + b + " is the maximum of the given three numbers");
+		    }
+		    else{
+		        System.out.println("c = " + c + " is the maximum of the given three numbers");
+		    }
+		}
+	}
+}

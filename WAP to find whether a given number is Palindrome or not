@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args){
+	    Scanner s = new Scanner(System.in);
+	    
+		System.out.print("Enter a number : ");
+		int n = s.nextInt();
+		int i = 0;
+		int r = n;
+		
+		while(n!=0){
+		    i = (i*10)+(n%10);
+		    n = n/10;
+		}
+		System.out.println("Reverse of the given number is : " + i);
+		
+		if(r==i){
+		    System.out.println("The given number is Pallindrome");
+		}
+		else{
+		    System.out.println("The given number is not a Pallndrome");
+		}
+	}
+}

@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    
+	    int days = s.nextInt();
+	    int weeks = days/7;
+	    int rem = days%7;
+	    int years = days/365;
+	    int rem2 = (days-365)/7;
+	    int rem3 = (days-365)%7;
+	    
+		System.out.println(weeks + " Weeks and " + rem + " days");
+		System.out.println(years + " Years, " + rem2 + " Weeks and " + rem3 + " days");
+	}
+}
